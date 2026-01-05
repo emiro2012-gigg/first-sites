@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supercars Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          orbitron: ['Orbitron', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+  <style>
+    .nav-link {
+      position: relative;
+      padding-bottom: 6px;
+      transition: color 0.3s ease;
+    }
+
+    /* линия */
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #a855f7; /* фиолетовый */
+      transition: width 0.3s ease;
+    }
+
+    /* hover эффект 
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: #a855f7;
+    }
+
+
+
+
+    
+.discover-btn {
+  transition: color 0.3s ease;
+}
+
+/* розовое заполнение 
+.discover-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #ec4899,
+    #a855f7,
+    #ec4899
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  filter: blur(0px);
+}
+
+/* hover 
+.discover-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.discover-btn:hover {
+  color: #020617;
+}
+
+ лёгкое сияние 
+.discover-btn:hover::before {
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.8);
+}
+*/
+
+
+
+
+
+  </style>
+</head>
+
+<body class="bg-zinc-950 min-h-screen text-white">
+
+  <header class="bg-zinc-900 h-16 px-10 flex items-center justify-between">
+    
+    <div class="font-orbitron text-xl font-extrabold tracking-widest uppercase">
+  <span class="text-violet-500">SUPERCARS</span>
+  <span class="text-white"> GALLERY</span>
+</div>
+
+    
+    <nav class="flex space-x-8">
+      <a href="./home.html" class="nav-link text-white-400">Home</a>
+      <a href="./gallery.html" class="nav-link text-white-400">Gallery</a>
+      <a href="#about" class="nav-link text-white-400">About</a>
+      <a href="#contact" class="nav-link text-white-400">Contact</a>
+    </nav>
+
+  </header>
+
+<section class="min-h-screen flex items-center px-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+
+      
+      <div class="flex flex-col justify-center">
+        <h1 class=" font-orbitron  font-extrabold tracking-widest uppercase text-4xl md:text-6xl font-bold leading-tight">
+          BEYOND SPEED.<br />
+          BEYOND LUXURY.
+        </h1>
+
+        <p class="text-gray-400 mt-6 max-w-md">
+          Explore the world's most exclusive supercars
+        </p>
+
+        <a href="./gallery.html"><button class="discover-btn relative overflow-hidden px-6 py-3 border border-purple-500 text-purple-400 font-semibold">
+  <span class="relative z-10">Discover</span>
+</button></a>
+
+      </div>
+
+   <div class="relative">
+ 
+  <div class="absolute inset-0 bg-purple-600 blur-3xl opacity-30 pointer-events-none"></div>
+
+  <img
+    src="./supercars/1x-1-1080x675.jpg"
+    alt="Luxury Cars"
+    class="parallax-img relative rounded-xl w-full object-cover transition-transform hover:scale-105 duration-500 ease-out"
+  />
+</div>
+
+
+    </div>
+  </section>
+
+
+
+<section id="about" class="px-10 py-24 bg-zinc-950 text-white">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+   
+    <div>
+      <h2 class=" font-orbitron  font-extrabold tracking-widest uppercase text-4xl  font-bold leading-tight">
+        About <span class="text-violet-500">Luxury Car</span><br />
+        Gallery
+      </h2>
+
+      <p class="text-zinc-400 mb-4 max-w-xl">
+        Welcome to the ultimate destination for supercar enthusiasts.
+        Our gallery showcases the world's most exclusive, high-performance
+        vehicles from legendary manufacturers.
+      </p>
+
+      <p class="text-zinc-400 max-w-xl">
+        Each car in our collection represents the pinnacle of automotive
+        engineering, combining breathtaking design with cutting-edge technology.
+      </p>
+
+      <div class="flex gap-12 mt-10">
+        <div>
+          <div class="text-violet-500 text-3xl font-bold">50+</div>
+          <div class="text-zinc-400 text-sm">Supercars</div>
+        </div>
+
+        <div>
+          <div class="text-violet-500 text-3xl font-bold">15</div>
+          <div class="text-zinc-400 text-sm">Brands</div>
+        </div>
+
+        <div>
+          <div class="text-violet-500 text-3xl font-bold">1000+</div>
+          <div class="text-zinc-400 text-sm">HP Average</div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="relative">
+ 
+      <div class="absolute inset-0 bg-violet-600 blur-3xl opacity-30"></div>
+
+      <img
+        src="./supercars/bugatti-chiron-wallpaper-3-1.webp"
+        alt="Supercar"
+        class="relative rounded-xl w-full object-cover transition-transform hover:scale-105 duration-500 ease-in-out"
+      />
+    </div>
+
+  </div>
+</section>
+
+<footer id="contact" class="bg-[#0f0f0f] text-white py-20 px-6 font-sans">
+  <div class="max-w-6xl mx-auto">
+    
+    <div class="mb-16 inline-block group/title cursor-pointer">
+      <h2 class="text-5xl font-bold tracking-tight italic transition-colors duration-300 group-hover/title:text-purple-500">
+        FeedBack
+      </h2>
+      <div class="h-[3px] w-0 bg-purple-500 transition-all duration-300 ease-in-out group-hover/title:w-full mt-2 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+      
+      <div class="space-y-8">
+        <div class="group flex items-center space-x-5 cursor-pointer">
+          <div class="bg-zinc-800/80 p-5 rounded-2xl transition-all duration-500 
+group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-pink-500 
+group-hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] group-hover:scale-110">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <span class="text-lg text-gray-400 group-hover:text-white transition-colors duration-300">Kyrgyzstan,Bishkek</span>
+        </div>
+
+        <div class="group flex items-center space-x-5 cursor-pointer">
+          <div class="bg-zinc-800/80 p-5 rounded-2xl transition-all duration-500 
+group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-pink-500 
+group-hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] group-hover:scale-110">
+ <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <span class="text-lg text-gray-400 group-hover:text-white transition-colors duration-300">+996 5*8 * * *</span>
+        </div>
+
+        <div class="group flex items-center space-x-5 cursor-pointer">
+          <div class="bg-zinc-800/80 p-5 rounded-2xl transition-all duration-500 
+                      group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-pink-500 
+                      group-hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] group-hover:scale-110">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <span class="text-lg text-gray-400 group-hover:text-white transition-colors duration-300">emirbahtiarov@gmail.com</span>
+        </div>
+      </div>
+
+      <form class="space-y-5">
+        <input type="text" placeholder="Your Name" 
+          class="w-full bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 outline-none transition-all duration-300
+                 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)]
+                 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 placeholder:text-zinc-600">
+        
+        <input type="email" placeholder="Your Email" 
+          class="w-full bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 outline-none transition-all duration-300
+                 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)]
+                 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 placeholder:text-zinc-600">
+        
+        <textarea placeholder="Your Message" rows="5"class="w-full bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 outline-none transition-all duration-300
+                 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)]
+                 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 placeholder:text-zinc-600 resize-none"></textarea>
+        
+        <button type="submit" 
+          class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-xl transition-all active:scale-[0.98] shadow-lg shadow-purple-900/20">
+          Send Message
+        </button>
+      </form>
+
+    </div>
+  </div>
+</footer>
+
+<footer class="bg-[#0b0b0f] text-gray-400 ">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+
+      <div class="text-center md:text-left font-orbitron text-xl font-extrabold tracking-widest uppercase">
+        <h2 class="text-xl font-bold">
+          <span class="text-purple-500">SUPERCARS</span>
+          <span class="text-white"> GALLERY</span>
+        </h2>
+        <p class="text-sm mt-1">The ultimate supercar experience</p>
+      </div>
+
+
+      <div class="flex gap-4 text-2xl">
+        <a href="#" class="hover:text-purple-500 transition" title="Twitch">
+          <i class="fab fa-twitch"></i>
+        </a>
+        <a href="#" class="hover:text-purple-500 transition" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="#" class="hover:text-purple-500 transition" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="hover:text-purple-500 transition" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="hover:text-purple-500 transition" title="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-4 text-center text-sm ">
+      © 2025 SUPERCARS Gallery. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>

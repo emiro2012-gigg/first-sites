@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supercars Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          orbitron: ['Orbitron', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+  <style>
+    .nav-link {
+      position: relative;
+      padding-bottom: 6px;
+      transition: color 0.3s ease;
+    }
+
+    /* линия */
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #a855f7; /* фиолетовый */
+      transition: width 0.3s ease;
+    }
+
+    /* hover эффект 
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: #a855f7;
+    }
+
+
+
+
+    
+.discover-btn {
+  transition: color 0.3s ease;
+}
+
+/* розовое заполнение 
+.discover-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #ec4899,
+    #a855f7,
+    #ec4899
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  filter: blur(0px);
+}
+
+/* hover 
+.discover-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.discover-btn:hover {
+  color: #020617;
+}
+
+ лёгкое сияние 
+.discover-btn:hover::before {
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.8);
+}
+*/
+
+
+
+
+
+  </style>
+</head>
+
+<body class="bg-zinc-950 min-h-screen text-white">
+
+  <header class="bg-zinc-900 h-16 px-10 flex items-center justify-between">
+    
+    <div class="font-orbitron text-xl font-extrabold tracking-widest uppercase">
+  <span class="text-violet-500">SUPERCARS</span>
+  <span class="text-white"> GALLERY</span>
+</div>
+
+    
+    <nav class="flex space-x-8">
+      <a href="./home.html" class="nav-link text-white-400">Home</a>
+      <a href="./gallery.html" class="nav-link text-white-400">Gallery</a>
+      <a href="#about" class="nav-link text-white-400">About</a>
+      <a href="#contact" class="nav-link text-white-400">Contact</a>
+    </nav>
+
+  </header>
+
+<section class="min-h-screen flex items-center px-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+
+      
+      <div class="flex flex-col justify-center">
+        <h1 class=" font-orbitron  font-extrabold tracking-widest uppercase text-4xl md:text-6xl font-bold leading-tight">
+          BEYOND SPEED.<br />
+          BEYOND LUXURY.
+        </h1>
+
+        <p class="text-gray-400 mt-6 max-w-md">
+          Explore the world's most exclusive supercars
+        </p>
+
+        <button class="discover-btn relative overflow-hidden px-6 py-3 border border-purple-500 text-purple-400 font-semibold">
+  <span class="relative z-10">Discover</span>
+</button>
+
+      </div>
+
+   <div class="relative">
+ 
+  <div class="absolute inset-0 bg-purple-600 blur-3xl opacity-30 pointer-events-none"></div>
+
+  <img
+    src="./supercars/1x-1-1080x675.jpg"
+    alt="Luxury Cars"
+    class="parallax-img relative rounded-xl w-full object-cover transition-transform hover:scale-105 duration-500 ease-out"
+  />
+</div>
+
+
+    </div>
+  </section>
+
+
+
+<section id="about" class="px-10 py-24 bg-zinc-950 text-white">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+   
+    <div>
+      <h2 class=" font-orbitron  font-extrabold tracking-widest uppercase text-4xl  font-bold leading-tight">
+        About <span class="text-violet-500">Luxury Car</span><br />
+        Gallery
+      </h2>
+
+      <p class="text-zinc-400 mb-4 max-w-xl">
+        Welcome to the ultimate destination for supercar enthusiasts.
+        Our gallery showcases the world's most exclusive, high-performance
+        vehicles from legendary manufacturers.
+      </p>
+
+      <p class="text-zinc-400 max-w-xl">
+        Each car in our collection represents the pinnacle of automotive
+        engineering, combining breathtaking design with cutting-edge technology.
+      </p>
+
+      <div class="flex gap-12 mt-10">
+        <div>
+          <div class="text-violet-500 text-3xl font-bold">50+</div>
+          <div class="text-zinc-400 text-sm">Supercars</div>
+        </div>
+
+        <div>
+          <div class="text-violet-500 text-3xl font-bold">15</div>
+          <div class="text-zinc-400 text-sm">Brands</div>
+        </div>
+
+        <div>
+          <div class="text-violet-500 text-3xl font-bold">1000+</div>
+          <div class="text-zinc-400 text-sm">HP Average</div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="relative">
+      <!-- glow -->
+      <div class="absolute inset-0 bg-violet-600 blur-3xl opacity-30"></div>
+
+      <img
+        src="./supercars/bugatti-chiron-wallpaper-3-1.webp"
+        alt="Supercar"
+        class="relative rounded-xl w-full object-cover transition-transform hover:scale-105 duration-500 ease-in-out"
+      />
+    </div>
+
+  </div>
+</section>
+
+ <script src="./main.js"></script>
+</body>
+</html>

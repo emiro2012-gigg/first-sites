@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supercars Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            orbitron: ['Orbitron', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Навигация 
+    .nav-link, .nav-link-super {
+      position: relative;
+      padding-bottom: 6px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    /* Линия под элементом 
+    .nav-link::after, .nav-link-super::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #a855f7;
+      transition: width 0.3s ease;
+    }
+
+    /* Hover эффект 
+    .nav-link:hover::after, .nav-link-super:hover::after {
+      width: 100%;
+    }
+
+    .nav-link:hover, .nav-link-super:hover {
+      color: #a855f7;
+    }
+      */
+  </style>
+</head>
+
+<body class="bg-zinc-950 min-h-screen text-white">
+
+  
+  <header class="bg-zinc-900 h-16 px-10 flex items-center justify-between">
+    <div class="font-orbitron text-xl font-extrabold tracking-widest uppercase">
+      <span class="text-violet-500">SUPERCARS</span>
+      <span class="text-white"> GALLERY</span>
+    </div>
+    <nav class="flex space-x-8">
+      <a href="./home.html" class="nav-link text-gray-400">Home</a>
+      <a href="./gallery.html" class="nav-link text-gray-400">Gallery</a>
+      <a href="#about," class="nav-link text-gray-400">About</a>
+      <a href="#contact" class="nav-link text-gray-400">Contact</a>
+    </nav>
+  </header>
+
+  
+  <main class="flex flex-col items-center my-16">
+    <div class=" font-orbitron  font-extrabold tracking-widest uppercase text-4xl  font-bold leading-tight nav-link-super  font-black uppercase tracking-tight mb-8">
+      Supercars Gallery
+    </div>
+
+    
+    <div class="flex justify-center gap-3 mb-14">
+      <button data-filter="all" class=" filter-btn px-6 py-2 rounded-xl bg-[#1a1a1c] border border-zinc-800 hover:border-[#ff00ff] hover:shadow-[0_0_20px_rgba(255,0,255,0.4)] transition-all duration-500">All</button>
+      <button data-filter="ferrari" class=" filter-btn px-6 py-2 rounded-xl bg-[#1a1a1c] border border-zinc-800 hover:border-[#ff00ff] hover:shadow-[0_0_20px_rgba(255,0,255,0.4)] transition-all duration-500">Ferrari</button>
+      <button data-filter="lamborghini" class="filter-btn px-6 py-2 rounded-xl bg-[#1a1a1c] border border-zinc-800 hover:border-[#ff00ff] hover:shadow-[0_0_20px_rgba(255,0,255,0.4)] transition-all duration-500">Lamborghini</button>
+      <button data-filter="porsche" class="filter-btn px-6 py-2 rounded-xl bg-[#1a1a1c] border border-zinc-800 hover:border-[#ff00ff] hover:shadow-[0_0_20px_rgba(255,0,255,0.4)] transition-all duration-500">Porsche</button>
+      <button data-filter="MClaren" class="filter-btn px-6 py-2 rounded-xl bg-[#1a1a1c] border border-zinc-800 hover:border-[#ff00ff] hover:shadow-[0_0_20px_rgba(255,0,255,0.4)] transition-all duration-500">McLaren</button>
+    </div>
+
+   
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+
+      <div data-category="ferrari" class=" car-card bg-[#121214] border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-colors transition-transform hover:scale-105 duration-500">
+        <div class="h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1592198084033-aade902d1aae?q=80&w=600');"></div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">Ferrari SF90 Stradale</h2>
+          <p class="text-zinc-500 text-sm mb-6 leading-relaxed">The SF90 Stradale is Ferrari's first series production PHEV (Plug-in Hybrid Electric Vehicle).</p>
+          <div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-zinc-300">
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 1000 HP</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 2.5s 0-60</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> $890,000</div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div  data-category='lamborghini' class=" car-card bg-[#121214] border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-colors transition-transform hover:scale-105 duration-500">
+        <div class="h-52 bg-cover bg-center" style="background-image: url('./supercars/pexels-pashal-337909.jpg');"></div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">Lamborghini Aventador SVJ</h2>
+          <p class="text-zinc-500 text-sm mb-6 leading-relaxed">The Aventador SVJ represents the peak of Lamborghini's V12 production cars.</p>
+          <div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-zinc-300">
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 770 HP</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 2.8s 0-60</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> $1,200,000</div>
+          </div>
+        </div>
+      </div>
+
+      <div data-category="porsche" class=" car-card bg-[#121214] border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-colors transition-transform hover:scale-105 duration-500">
+        <div class="h-52 bg-cover bg-center" style="background-image: url('./supercars/poreche-911-turbo-s-review-2025-01_0.jpg');"></div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">Porsche 911 Turbo S</h2>
+          <p class="text-zinc-500 text-sm mb-6 leading-relaxed">The 911 Turbo S is Porsche's fastest 911 variant with all-wheel drive and a turbocharged flat-six engine.</p>
+          <div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-zinc-300">
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 640 HP</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 2.7s 0-60</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> $250,000</div>
+          </div>
+        </div>
+      </div>
+
+
+   <div  data-category='MClaren' class=" car-card bg-[#121214] border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-colors transition-transform hover:scale-105 duration-500">
+        <div class="h-52 bg-cover bg-center" style="background-image: url('./supercars/pexels-autorecords-10550012.jpg');"></div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">McLaren P1</h2>
+          <p class="text-zinc-500 text-sm mb-6 leading-relaxed">The McLaren P1 is a British limited-production plug-in hybrid hypercar, produced by McLaren Automotive from 2013 to 2015. </p>
+          <div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-zinc-300">
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 916 HP</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 2.8s 0-60</div>
+            <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> $2,200,000</div>
+          </div>
+        </div>
+      </div>
+
+  <div  data-category='porsche' class=" car-card bg-[#121214] border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-colors transition-transform hover:scale-105 duration-500">
+        <div class="h-52 bg-cover bg-center" style="background-image: url('./supercars/Ray_Baldwin_Subaru_Stamford_NY_Auto_Show_066.JPG');"></div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">Porsche 918 Spyder</h2>
+          <p class="text-zinc-500 text-sm mb-6 leading-relaxed">The Porsche 918 Spyder is a groundbreaking German plug-in hybrid hypercar produced in a limited series from 2013 to 2015.  </p>
+          <div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-zinc-300">
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 887 HP</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 2.6s 0-60</div>
+            <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> $2,00,000</div>
+          </div>
+        </div>
+      </div>
+
+ <div  data-category='MClaren' class=" car-card bg-[#121214] border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-colors transition-transform hover:scale-105 duration-500">
+        <div class="h-52 bg-cover bg-center" style="background-image: url('./supercars/Mclaren_720S_PA280973-PSD.jpg');"></div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">McLaren 720S</h2>
+          <p class="text-zinc-500 text-sm mb-6 leading-relaxed">The McLaren 720S is a British sports car produced by McLaren Automotive. It is the successor to the McLaren 570S and features a carbon fiber monocoque chassis and a twin-turbo V8 engine. </p>
+          <div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-zinc-300">
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 710 HP</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 2.8s 0-60</div>
+            <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> $400,000</div>
+          </div>
+        </div>
+      </div>
+
+  <div data-category="ferrari" class=" car-card bg-[#121214] border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-colors transition-transform hover:scale-105 duration-500">
+        <div class="h-52 bg-cover bg-center" style="background-image: url('./supercars/ferrari-812-superfast_13_2048x2048.webp');"></div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">Ferrari 812 Superfast</h2>
+          <p class="text-zinc-500 text-sm mb-6 leading-relaxed">The Ferrari 812 is a series of luxury front-mid-engine, rear-wheel-drive Grand Tourer sports cars produced by the Italian manufacturer Ferrari.</p>
+          <div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-zinc-300">
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 800 HP</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 2.9s 0-60</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> $430,000</div>
+          </div>
+        </div>
+      </div>
+
+<div  data-category='lamborghini' class=" car-card bg-[#121214] border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-colors transition-transform hover:scale-105 duration-500">
+        <div class="h-52 bg-cover bg-center" style="background-image: url('./supercars/Lamborghini-Huracan-STO03.jpg');"></div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">Lamborghini Huracan STO</h2>
+          <p class="text-zinc-500 text-sm mb-6 leading-relaxed">The Lamborghini Huracán is an iconic mid-engine sports car produced by Lamborghini from 2014 to 2024.</p>
+          <div class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-zinc-300">
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 740 HP</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> 2.8s 0-60</div>
+             <div class="flex items-center gap-1"><span class="text-[#ff00ff] text-lg">✦</span> $345,000</div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+<section id="about" class="px-10 py-24 bg-zinc-950 text-white">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+   
+    <div>
+      <h2 class=" font-orbitron  font-extrabold tracking-widest uppercase text-4xl  font-bold leading-tight">
+        About <span class="text-violet-500">Luxury Car</span><br />
+        Gallery
+      </h2>
+
+      <p class="text-zinc-400 mb-4 max-w-xl">
+        Welcome to the ultimate destination for supercar enthusiasts.
+        Our gallery showcases the world's most exclusive, high-performance
+        vehicles from legendary manufacturers.
+      </p>
+
+      <p class="text-zinc-400 max-w-xl">
+        Each car in our collection represents the pinnacle of automotive
+        engineering, combining breathtaking design with cutting-edge technology.
+      </p>
+
+      <div class="flex gap-12 mt-10">
+        <div>
+          <div class="text-violet-500 text-3xl font-bold">50+</div>
+          <div class="text-zinc-400 text-sm">Supercars</div>
+        </div>
+
+        <div>
+          <div class="text-violet-500 text-3xl font-bold">15</div>
+          <div class="text-zinc-400 text-sm">Brands</div>
+        </div>
+
+        <div>
+          <div class="text-violet-500 text-3xl font-bold">1000+</div>
+          <div class="text-zinc-400 text-sm">HP Average</div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="relative">
+    
+      <div class="absolute inset-0 bg-violet-600 blur-3xl opacity-30"></div>
+
+      <img
+        src="./supercars/bugatti-chiron-wallpaper-3-1.webp"
+        alt="Supercar"
+        class="relative rounded-xl w-full object-cover transition-transform hover:scale-105 duration-500"
+      />
+    </div>
+
+  </div>
+</section>
+
+<footer id="contact" class="bg-[#0f0f0f] text-white py-20 px-6 font-sans">
+  <div class="max-w-6xl mx-auto">
+    
+    <div class="mb-16 inline-block group/title cursor-pointer">
+      <h2 class="text-5xl font-bold tracking-tight italic transition-colors duration-300 group-hover/title:text-purple-500">
+        FeedBack
+      </h2>
+      <div class="h-[3px] w-0 bg-purple-500 transition-all duration-300 ease-in-out group-hover/title:w-full mt-2 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+      
+      <div class="space-y-8">
+        <div class="group flex items-center space-x-5 cursor-pointer">
+          <div class="bg-zinc-800/80 p-5 rounded-2xl transition-all duration-500 
+                      group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-pink-500 
+                      group-hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] group-hover:scale-110">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <span class="text-lg text-gray-400 group-hover:text-white transition-colors duration-300">Kyrgyzstan,Bishkek</span>
+        </div>
+
+        <div class="group flex items-center space-x-5 cursor-pointer">
+          <div class="bg-zinc-800/80 p-5 rounded-2xl transition-all duration-500 
+                      group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-pink-500 
+                      group-hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] group-hover:scale-110">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <span class="text-lg text-gray-400 group-hover:text-white transition-colors duration-300">+996 5*8 219 3*3</span>
+        </div>
+
+        <div class="group flex items-center space-x-5 cursor-pointer">
+          <div class="bg-zinc-800/80 p-5 rounded-2xl transition-all duration-500 
+                      group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-pink-500 
+                      group-hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] group-hover:scale-110">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <span class="text-lg text-gray-400 group-hover:text-white transition-colors duration-300">emirbahtiarov@gmail.com</span>
+        </div>
+      </div>
+
+      <form class="space-y-5">
+        <input type="text" placeholder="Your Name" 
+          class="w-full bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 outline-none transition-all duration-300
+                 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)]
+                 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 placeholder:text-zinc-600">
+        
+        <input type="email" placeholder="Your Email" 
+          class="w-full bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 outline-none transition-all duration-300
+                 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)]
+                 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 placeholder:text-zinc-600">
+        
+        <textarea placeholder="Your Message" rows="5"class="w-full bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 outline-none transition-all duration-300
+                 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)]
+                 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 placeholder:text-zinc-600 resize-none"></textarea>
+        
+        <button type="submit" 
+          class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-xl transition-all active:scale-[0.98] shadow-lg shadow-purple-900/20">
+          Send Message
+        </button>
+      </form>
+
+    </div>
+  </div>
+</footer>
+
+  <script src="./main.js"></script>
+
+<footer class="bg-[#0b0b0f] text-gray-400 ">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+
+
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+
+      <div class="text-center md:text-left font-orbitron text-xl font-extrabold tracking-widest uppercase">
+        <h2 class="text-xl font-bold">
+          <span class="text-purple-500">SUPERCARS</span>
+          <span class="text-white"> GALLERY</span>
+        </h2>
+        <p class="text-sm mt-1">The ultimate supercar experience</p>
+      </div>
+
+      
+      <div class="flex gap-4 text-2xl">
+        <a href="#" class="hover:text-purple-500 transition" title="Twitch">
+          <i class="fab fa-twitch"></i>
+        </a>
+        <a href="#" class="hover:text-purple-500 transition" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="#" class="hover:text-purple-500 transition" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="hover:text-purple-500 transition" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="hover:text-purple-500 transition" title="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-4 text-center text-sm ">
+      © 2025 SUPERCARS Gallery. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
